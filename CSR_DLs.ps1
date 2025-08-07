@@ -1,4 +1,5 @@
-﻿# Ensure the Active Directory module is available
+# Test by JP 8-7-2025
+ # Ensure the Active Directory module is available
 if (-not (Get-Module -ListAvailable -Name ActiveDirectory)) {
     try {
         Install-WindowsFeature -Name RSAT-AD-PowerShell -IncludeAllSubFeature -IncludeManagementTools -ErrorAction Stop
@@ -59,3 +60,4 @@ $results | Format-Table -AutoSize
 
 # Optionally export to CSV
 #$results | Export-Csv -Path "C:\STPS\CSR_Distribution_Lists.csv" -NoTypeInformation -Encoding UTF8
+
