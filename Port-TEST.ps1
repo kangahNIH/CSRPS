@@ -1,0 +1,1 @@
+﻿Test-NetConnection -ComputerName 10.178.64.137 -Port 1433
